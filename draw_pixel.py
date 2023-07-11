@@ -5,9 +5,9 @@ class ImageCreator():
         self.draw_canvans = Image.new(mode='P', size=size, color=color)
 
         
-    def draw_pixel(self, color: str, position: tuple) -> None:
+    def draw_pixel(self, color: str, position: tuple | list[tuple]) -> None:
         self.draw_canvans.putpixel(position, ImageColor.getcolor(color, 'P'))
 
-    def save_image(self) -> None:
-        self.draw_canvans.save('simplePixel.png')
+    def save_image(self, file_name: str = 'simpelPixel.png') -> None:
+        self.draw_canvans.save(file_name)
 
