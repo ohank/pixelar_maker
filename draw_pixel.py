@@ -9,7 +9,7 @@ class ImageCreator():
 
         
     def draw_pixel(self, color: str, position: Union[tuple, list[tuple]]) -> None:
-        if isinstance(position, list[tuple]):
+        if isinstance(position, list):
             for pos in position:
                 self.draw_canvans.putpixel(pos, ImageColor.getcolor(color, 'P'))
         else:
