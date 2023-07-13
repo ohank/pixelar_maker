@@ -18,6 +18,6 @@ class ImageCreator():
     def save_image(self, file_name: str = 'simpelPixel.png') -> None:
         self.draw_canvans.save(file_name)
     
-    def draw_horizontal_line(self, color: str) -> None:
+    def draw_horizontal_line(self, color: str, line_pos: int) -> None:
         self.draw_pixel(color=color, position=
-                        list(zip(range(self._width),([0] * self._height))))
+                        list(zip(range(self._width),([line_pos] * self._height))))
